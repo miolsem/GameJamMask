@@ -581,6 +581,13 @@ function SetVelocity (velocity : Vector3) {
 	movement.frameVelocity = Vector3.zero;
 	SendMessage("OnExternalVelocity");
 }
+function SetVelocityDash (velocity : Vector3) {
+	grounded = false;
+	movement.velocity = (velocity * 25) + new Vector3(0,5,0);
+	movement.frameVelocity = Vector3.zero;
+	//SendMessage("OnExternalVelocity");
+}
+
 
 
 
