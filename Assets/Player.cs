@@ -5,10 +5,10 @@ public class Player : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int Mask; 	//1=
-					//2=
-					//3=
-					//4=
+		int Mask; 	//1=Strong	
+					//2=Fire
+					//3=Truth
+					//4=Speed
 
 	}
 	
