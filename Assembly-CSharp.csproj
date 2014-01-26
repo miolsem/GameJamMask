@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{684DB21B-82CB-3AF0-B895-A3E4BD521CAB}</ProjectGuid>
+	<ProjectGuid>{3BF1B0D5-726E-9920-18DD-2C8C5F1DC33F}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -55,12 +55,15 @@
      <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\Doors.cs" />
      <Compile Include="Assets\Scripts\FUCK.cs" />
+     <Compile Include="Assets\Scripts\FireMaskPickup.cs" />
      <Compile Include="Assets\Scripts\LevelEnd.cs" />
      <Compile Include="Assets\Scripts\ObjectSelector.cs" />
      <Compile Include="Assets\Scripts\PhysicsObject.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerThing.cs" />
+     <Compile Include="Assets\Scripts\StrongMaskPickup.cs" />
      <Compile Include="Assets\Scripts\TriggerObject.cs" />
+     <Compile Include="Assets\Scripts\TruthTransparent.cs" />
      <Compile Include="Assets\SkyboxRotate.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
@@ -70,9 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{EEB34089-17FD-69C1-ADBF-FA4DB216270A}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{080B8F4A-C809-0846-F41A-D49A0330904D}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{B4707804-E53A-E0B2-42A9-3F90998D235A}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{95291B4D-D58A-F6F9-2DA6-92F28E71AECC}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
