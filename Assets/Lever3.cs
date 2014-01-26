@@ -30,11 +30,11 @@ public class Lever3 : MonoBehaviour {
 
 			}
 		}
-		if ((lvc.MOT == true && lvc.lv3 == true) || (lvc.MOT == true && lvc.lv2 == false)) {
+		if (lvc.MOT == true && (lvc.lv3Lock == true || lvc.lv2Lock == false)) {
 			//renderer.material.mainTexture = "invisibleShader";
 			renderer.material.mainTexture = invisible;
 		}
-		else if((lvc.MOT == true && lvc.lv2 == true && lvc.lv3 == false) || lvc.MOT == false)
+		else if(lvc.MOT == false || (lvc.MOT == true && lvc.lv2Lock == true))
 		{
 			renderer.material.mainTexture = visible;
 		}

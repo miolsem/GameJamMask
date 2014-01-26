@@ -10,9 +10,9 @@ public class LeverController : MonoBehaviour {
 	public bool lv3Lock;
 	public bool MOT;
 	bool unlock;
-	Lever1 lev1;
-	Lever2 lev2;
-	Lever3 lev3;
+//	Lever1 lev1;
+//	Lever2 lev2;
+//	Lever3 lev3;
 	// Use this for initialization
 	void Start () {
 		lv1 = false;
@@ -23,9 +23,9 @@ public class LeverController : MonoBehaviour {
 		lv3Lock = false;
 		MOT = true;
 		unlock = false;
-		lev1 = GetComponent<Lever1>();
-		lev2 = GetComponent<Lever2>();
-		lev3 = GetComponent<Lever3>();
+//		lev1 = GetComponent<Lever1>();
+//		lev2 = GetComponent<Lever2>();
+//		lev3 = GetComponent<Lever3>();
 	}
 	
 	// Update is called once per frame
@@ -33,16 +33,16 @@ public class LeverController : MonoBehaviour {
 	if (lv1 == true || lv1Lock == true) {
 			lv1Lock = true;
 
-			print("First lock is away");
+			//print("First lock is away");
 			if(lv2 == true || lv2Lock == true)
 			{
 				lv2Lock = true;
 
-				print("Second lock is away");
+				//print("Second lock is away");
 				if(lv3 == true || lv3Lock == true)
 				{
 					lv3Lock = true;
-					print("Third lock is away");
+					//print("Third lock is away");
 					//lv3 = false;
 					unlock = true;
 				}
