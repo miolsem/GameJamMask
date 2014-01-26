@@ -8,7 +8,8 @@ public class Player : MonoBehaviour {
 	CharacterMotor controller;
 	// Use this for initialization
 	void Start () {
-		Masknum = 4; 	//1= Mask of Truth
+		//this.gameObject.name = "player";
+		Masknum = 4; //1= Mask of Truth
 					//2= Strong Mask
 					//3= Fire Mask
 					//4= Dash mask
