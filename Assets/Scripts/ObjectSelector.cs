@@ -13,35 +13,37 @@ public class ObjectSelector : MonoBehaviour {
 	Lever3 lv3;
 	GameObject objectHeld;
 	GameObject  objectSelected;
+	Player play;
 	// Use this for initialization
 	void Start () {
 		shader2= Shader.Find("Toon/Lighted Outline");
 		shader1= Shader.Find("Diffuse");
+		play = GameObject.Find ("First Person Controller").GetComponent<Player> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (objectHeld == null) {
-						//Pick up objects
-						Ray ray = camera.ViewportPointToRay (new Vector3 (0.5F, 0.5F, 0));
-						RaycastHit hit;
-						if (Physics.Raycast (ray, out hit)) {
-								if (hit.transform.name == "box") 
-									if (hit.distance<2.5F){
-										//print ("I'm lookin at a box, m8!");
-										objectSelected = hit.transform.gameObject;
-										objectSelected.renderer.material.shader = shader2;
-										//print (objectSelected.name);
-										if (Input.GetMouseButtonDown (0)) {
-												objectHeld = objectSelected;
+		if (play.Masknum == 3) {
+						if (objectHeld == null) {
+								//Pick up objects
+								Ray ray = camera.ViewportPointToRay (new Vector3 (0.5F, 0.5F, 0));
+								RaycastHit hit;
+								if (Physics.Raycast (ray, out hit)) {
+										if (hit.transform.name == "box") 
+										if (hit.distance < 2.5F) {
+												//print ("I'm lookin at a box, m8!");
+												objectSelected = hit.transform.gameObject;
+												objectSelected.renderer.material.shader = shader2;
+												//print (objectSelected.name);
+												if (Input.GetMouseButtonDown (0)) {
+														objectHeld = objectSelected;
+												}
+												//if 
 										}
-										//if 
-								}
-							if (hit.transform.tag == "Switches")
-							{
-								objectSelected = hit.transform.gameObject;
-								objectSelected.renderer.material.shader = shader2;
-								if (Input.GetMouseButtonDown (0)) {
+										if (hit.transform.tag == "Switches") {
+												objectSelected = hit.transform.gameObject;
+												objectSelected.renderer.material.shader = shader2;
+												if (Input.GetMouseButtonDown (0)) {
 //									if (objectSelected.name=="lv1"){
 //										lv1= (Lever1)FindObjectOfType(typeof(Lever1));
 //							lv1.Toggle();}
@@ -51,31 +53,29 @@ public class ObjectSelector : MonoBehaviour {
 //									if (objectSelected.name=="lv3"){
 //										lv3= (Lever3)FindObjectOfType(typeof(Lever3));
 //							lv3.Toggle();}
-								}
-							}
-
-						else {
-							if (objectSelected!=null){//print ("I'm looking at useless stuff!");
-								objectSelected.renderer.material.shader=shader1;
-							objectSelected = null;
-							}
-								}
-						} 
+												}
+										} else {
+												if (objectSelected != null) {//print ("I'm looking at useless stuff!");
+														objectSelected.renderer.material.shader = shader1;
+														objectSelected = null;
+												}
+										}
+								} 
 				
-				} else {
-						//objectHeld.getHeld(this.gameObject.transform.rotation,this.gameObject.transform.position+new Vector3(0,1,.3F));
-						objectHeld.transform.position = (this.gameObject.transform.position + new Vector3 (0F, 1.5F, 0F));
-						objectHeld.transform.rotation = (this.gameObject.transform.rotation);
+						} else {
+								//objectHeld.getHeld(this.gameObject.transform.rotation,this.gameObject.transform.position+new Vector3(0,1,.3F));
+								objectHeld.transform.position = (this.gameObject.transform.position + new Vector3 (0F, 1.5F, 0F));
+								objectHeld.transform.rotation = (this.gameObject.transform.rotation);
 
-						if (Input.GetMouseButtonDown (0)) {
-				objectHeld.transform.position = (this.gameObject.transform.position + 1.5F *this.gameObject.transform.forward +1.5F *this.gameObject.transform.up );
-								objectHeld = null;
-						}			
-						if (Input.GetMouseButtonDown (1)) {
-								objectHeld.rigidbody.AddForce (800 * objectHeld.transform.forward);
-								objectHeld = null;
+								if (Input.GetMouseButtonDown (0)) {
+										objectHeld.transform.position = (this.gameObject.transform.position + 1.5F * this.gameObject.transform.forward + 1.5F * this.gameObject.transform.up);
+										objectHeld = null;
+								}			
+								if (Input.GetMouseButtonDown (1)) {
+										objectHeld.rigidbody.AddForce (800 * objectHeld.transform.forward);
+										objectHeld = null;
+								}
 						}
-				}
-		//print (objectHeld);
-	}
+						//print (objectHeld);
+				}}
 }
