@@ -11,7 +11,7 @@ public class Lever3 : MonoBehaviour {
 	int reset;
 	// Use this for initialization
 	void Start () {
-		name = "lv1";
+		name = "lv3";
 		lvc = GameObject.Find ("LeverController").GetComponent<LeverController> ();
 		invisible = (Texture2D)Resources.Load ("invisibleShader", typeof (Texture2D));
 		visible = (Texture2D)Resources.Load ("visibleShader", typeof (Texture2D));
