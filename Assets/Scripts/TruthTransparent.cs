@@ -11,7 +11,7 @@ public class TruthTransparent : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (play.Masknum);
+		//print (play.Masknum);
 		if (play.Masknum == 1) {
 						SetTargetInvisible (gameObject);
 						
@@ -19,6 +19,7 @@ public class TruthTransparent : MonoBehaviour {
 			ReverseTargetInvisible(gameObject);
 				}
 	}
+
 	void SetTargetInvisible(GameObject Target)
 		
 	{

@@ -24,6 +24,11 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKey("p"))
+						Application.LoadLevel ("Room2");
+
+		if (this.gameObject.transform.position.y < 0)
+						Application.LoadLevel("Room1");
 		Screen.lockCursor = true;
 
 		if (Input.GetButton ("MaskofTruth")) {

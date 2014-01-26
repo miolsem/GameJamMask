@@ -41,6 +41,14 @@ public class Lever2 : MonoBehaviour {
 //			renderer.material.mainTexture = visible;
 //		}
 //		reset --;
+		if (lvc.MOT == true && (lvc.lv2Lock == true || lvc.lv1Lock == false)) {
+			//renderer.material.mainTexture = "invisibleShader";
+			renderer.material.mainTexture = invisible;
+		}
+		else if( lvc.MOT == false || (lvc.MOT == true && lvc.lv2Lock == false && lvc.lv1Lock == true)){
+			renderer.material.mainTexture = visible;
+		}
+		reset --;
 	}
 	public void OnMouseDown(){
 		print ("lever2!");	
@@ -50,14 +58,7 @@ public class Lever2 : MonoBehaviour {
 				
 			}
 
-		if (lvc.MOT == true && (lvc.lv2Lock == true || lvc.lv1Lock == false)) {
-			//renderer.material.mainTexture = "invisibleShader";
-			renderer.material.mainTexture = invisible;
-		}
-		else if( lvc.MOT == false || (lvc.MOT == true && lvc.lv2Lock == false && lvc.lv1Lock == true)){
-			renderer.material.mainTexture = visible;
-		}
-		reset --;
+
 	}
 
 }

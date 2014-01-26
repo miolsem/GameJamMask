@@ -19,5 +19,6 @@ public class Button : MonoBehaviour {
 		print ("dnjfinilfa");
 		if (collision.gameObject.tag == "Box")
 			press = true;
+		audio.Play();
 	}
 }

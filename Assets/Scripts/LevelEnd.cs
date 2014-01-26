@@ -13,9 +13,9 @@ public class LevelEnd : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter(Collider other)
+	void OnTriggerEnter(Collision other)
 	{
-		if (other.tag == "Player") {
+		if (other.gameObject.tag == "Player") {
 			Application.LoadLevel ("Scene2");
 			print ("derp");
 				}

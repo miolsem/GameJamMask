@@ -17,5 +17,6 @@ public class StrongMaskPickup : MonoBehaviour {
 		print ("strongmask");
 
 			play.strong = true;
+		Destroy (gameObject);
 	}
 }

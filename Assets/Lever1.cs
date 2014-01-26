@@ -40,17 +40,6 @@ public class Lever1 : MonoBehaviour {
 //			renderer.material.mainTexture = visible;
 //		}
 //		reset --;
-	}
-
-	public void OnMouseDown()
-	{
-		print ("lever1!");
-		if(reset <= 0){
-			lvc.lv1 = true;
-			reset = 12;
-			
-		}
-		
 		if (lvc.MOT == true && lvc.lv1Lock == true) {
 			//renderer.material.mainTexture = "invisibleShader";
 			renderer.material.mainTexture = invisible;
@@ -60,6 +49,20 @@ public class Lever1 : MonoBehaviour {
 			renderer.material.mainTexture = visible;
 		}
 		reset --;
+
+	}
+
+	public void OnMouseDown()
+	{
+		print ("lever1!");
+		if(reset <= 0){
+			lvc.lv1 = true;
+			reset = 12;
+			transform.Rotate(Vector3.right * 180);
+			
+		}
+		
+
 	}
 
 }

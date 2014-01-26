@@ -14,6 +14,7 @@ public class CageFall : MonoBehaviour {
 	void Update () {
 	if (trigger == true) {
 			transform.Translate(Vector3.down * Time.deltaTime);
+			audio.Play();
 				}
 	}
 }

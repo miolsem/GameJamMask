@@ -42,6 +42,15 @@ public class Lever3 : MonoBehaviour {
 //			renderer.material.mainTexture = visible;
 //		}
 //		reset --;
+		if (lvc.MOT == true && (lvc.lv3Lock == true || lvc.lv2Lock == false)) {
+			//renderer.material.mainTexture = "invisibleShader";
+			renderer.material.mainTexture = invisible;
+		}
+		else if(lvc.MOT == false || (lvc.MOT == true && lvc.lv2Lock == true))
+		{
+			renderer.material.mainTexture = visible;
+		}
+		reset --;
 	}
 
 	public void OnMouseDown(){
@@ -51,14 +60,6 @@ public class Lever3 : MonoBehaviour {
 			reset = 12;
 			
 		}
-	if (lvc.MOT == true && (lvc.lv3Lock == true || lvc.lv2Lock == false)) {
-		//renderer.material.mainTexture = "invisibleShader";
-		renderer.material.mainTexture = invisible;
-	}
-	else if(lvc.MOT == false || (lvc.MOT == true && lvc.lv2Lock == true))
-	{
-		renderer.material.mainTexture = visible;
-	}
-	reset --;
+	
 	}
 }

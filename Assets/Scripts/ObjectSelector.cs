@@ -72,7 +72,7 @@ public class ObjectSelector : MonoBehaviour {
 										objectHeld = null;
 								}			
 								if (Input.GetMouseButtonDown (1)) {
-										objectHeld.rigidbody.AddForce (800 * objectHeld.transform.forward);
+										objectHeld.rigidbody.AddForce (1200* (this.gameObject.transform.forward+new Vector3(0,.8F,0)));
 										objectHeld = null;
 								}
 						}
