@@ -56,7 +56,7 @@ public class ObjectSelector : MonoBehaviour {
 
 						else {
 							if (objectSelected!=null){//print ("I'm looking at useless stuff!");
-							objectSelected.renderer.material.shader=shader1;
+								objectSelected.renderer.material.shader=shader1;
 							objectSelected = null;
 							}
 								}

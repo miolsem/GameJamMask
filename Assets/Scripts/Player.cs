@@ -32,7 +32,7 @@ public class Player : MonoBehaviour {
 				
 				dashRecharge = 100;
 					dashCounter = 22;
-					print("HIT");
+					//print("HIT");
 				}
 
 

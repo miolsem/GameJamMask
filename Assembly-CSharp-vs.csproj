@@ -51,9 +51,10 @@
      <Compile Include="Assets\Lever2.cs" />
      <Compile Include="Assets\Lever3.cs" />
      <Compile Include="Assets\LeverController.cs" />
-     <Compile Include="Assets\PhysButton.cs" />
      <Compile Include="Assets\SPlat1.cs" />
+     <Compile Include="Assets\Scripts\Button.cs" />
      <Compile Include="Assets\Scripts\Doors.cs" />
+     <Compile Include="Assets\Scripts\FUCK.cs" />
      <Compile Include="Assets\Scripts\LevelEnd.cs" />
      <Compile Include="Assets\Scripts\ObjectSelector.cs" />
      <Compile Include="Assets\Scripts\PhysicsObject.cs" />
