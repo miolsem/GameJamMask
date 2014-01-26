@@ -23,9 +23,9 @@ public class PhysicsObject : MonoBehaviour {
 		}
 	}
 
-	void getHeld(Vector3 Rotation, Vector3 Position){
-		this.gameObject.transform.position = Rotation;
-		this.gameObject.transform.position = Position;
-	}
+//	void getHeld(Vector3 Rotation, Vector3 Position){
+//		this.gameObject.transform.position = Rotation;
+//		this.gameObject.transform.position = Position;
+//	}
 
 }
