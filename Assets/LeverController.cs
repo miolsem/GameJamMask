@@ -10,6 +10,7 @@ public class LeverController : MonoBehaviour {
 	public bool lv3Lock;
 	public bool MOT;
 	bool unlock;
+	CageFall cf;
 //	Lever1 lev1;
 //	Lever2 lev2;
 //	Lever3 lev3;
@@ -23,6 +24,7 @@ public class LeverController : MonoBehaviour {
 		lv3Lock = false;
 		MOT = true;
 		unlock = false;
+		cf = GameObject.Find ("cage").GetComponent<CageFall> ();
 //		lev1 = GetComponent<Lever1>();
 //		lev2 = GetComponent<Lever2>();
 //		lev3 = GetComponent<Lever3>();
@@ -60,7 +62,7 @@ public class LeverController : MonoBehaviour {
 		lv2 = false;
 		lv3 = false;
 		if (unlock == true) {
-
+			cf.trigger = true;
 				}
 //		lv1 = false;
 //		lv2 = false;
